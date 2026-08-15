@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Refinement"
+  short_description: "Refine Rust architecture, safety, and performance"
+  default_prompt: "Use $rust-refinement to survey and systematically improve this Rust workspace."
