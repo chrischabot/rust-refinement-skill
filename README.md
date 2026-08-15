@@ -1,21 +1,21 @@
 # Rust Refinement Skill
 
-A systematic workflow for turning locally-correct, agent-generated Rust into a coherent,
-idiomatic, efficient codebase. It surveys architecture first, applies mechanical tooling
-separately from behavioral refactors, reviews recurring Rust failure modes, and verifies
-the result with repository-appropriate gates.
+A skill for giving Rust code a careful second pass: understand the workspace, improve
+the code, run the Rust tooling, and keep the changes that genuinely make it better.
+
+## How it works
+
+- Read the workspace and understand how its crates fit together.
+- Refactor code that is awkward, wasteful, inconsistent, or unsafe.
+- Run the formatter, linter, tests, and any relevant Rust checks.
+- Keep the changes only when the code is clearer and the checks pass.
 
 ## Principles
 
-- Survey crate ownership, runtime constraints, and house style before editing.
-- Keep formatting, lint fixes, dependency pruning, and behavioral refactors separate.
-- Fix lints at the cause; do not hide debt behind unexplained `#[allow]` attributes.
-- Make invalid states unrepresentable with types where the complexity is justified.
-- Audit ownership, clones, allocations, async synchronization, and task lifecycles.
-- Choose data structures from access patterns, not habit.
-- Treat library API stability, unsafe code, WASM, and async runtimes as distinct risk
-  profiles.
-- Preserve unrelated work and distinguish focused checks from full local or remote proof.
+- Use Rust's type system to make mistakes harder to express.
+- Prefer clear ownership over cloning around the borrow checker.
+- Choose abstractions and data structures because they fit the problem.
+- Treat async code, unsafe code, and public APIs with extra care.
 
 ## Install
 
