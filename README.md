@@ -94,6 +94,10 @@ Use $rust-refinement to survey and systematically improve this Rust workspace.
 
 `skill/` is the whole installable skill: `SKILL.md` holds the playbook, and `agents/openai.yaml` holds the display name, short description and default prompt for OpenAI's skill interfaces. There is no build step or test suite, so a change to the skill is an edit to that Markdown.
 
+## Project background
+
+- [rust-refinement-skill project overview](https://chabot.dev/projects/#engineering-skills) on Chris Chabot’s site.
+
 ## License
 
 MIT, copyright 2026 Chris Chabot. See [LICENSE](LICENSE). The playbook's API and ownership section condenses the [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/).
